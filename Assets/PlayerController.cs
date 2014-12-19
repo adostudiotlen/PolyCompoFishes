@@ -29,5 +29,7 @@ public class PlayerController : MonoBehaviour
 		//this.rigidbody2D.MoveRotation (angle * 45.0f);
 		transform.Rotate (-this.transform.forward, angle * 45.0f * 0.05f);
 		tail.transform.localRotation = Quaternion.AngleAxis (90 + angle * 45.0f, this.transform.forward);
+
+		//Instantiate (tail,);
 	}
 }
