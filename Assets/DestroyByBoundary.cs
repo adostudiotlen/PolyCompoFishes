@@ -3,9 +3,9 @@ using System.Collections;
 
 public class DestroyByBoundary : MonoBehaviour 
 {
-    public void OnCollisionExit2D(Collision2D coll)
+    public void OnTriggerExit2D(Collider2D other)
     {
-        if (coll.gameObject.tag == "MainCamera")
+        if (other.tag == "MainCamera")
         {
             Destroy(gameObject);
         }
