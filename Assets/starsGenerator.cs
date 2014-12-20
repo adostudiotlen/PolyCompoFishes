@@ -3,12 +3,12 @@ using System.Collections;
 
 public class starsGenerator : MonoBehaviour 
 {
-	float boxWidth = 300.0f;
-	const int starsAmount = 3000;
+	float boxWidth = 50.0f;
+	const int starsAmount = 100;
 	Vector2 center;
 	//GameObject star;
 	GameObject[] stars = new GameObject[3];
-
+	
 	Vector3 spawnPoint;
 
 	GameObject player;
@@ -16,7 +16,7 @@ public class starsGenerator : MonoBehaviour
 	float yPlayerOffset=0.0f;
 	int xBox =0;
 	int yBox =0;
-
+	
 
 	GameObject[,] tablica = new GameObject[9,starsAmount];
 
@@ -50,7 +50,7 @@ public class starsGenerator : MonoBehaviour
 	{
 		xPlayerOffset = player.transform.position.x - (float)xBox * boxWidth;
 		yPlayerOffset = player.transform.position.y - (float)yBox * boxWidth;
-
+		boxWidth = boxWidth * player.transform.localScale.x;
 
 		//W prawo
 		if (xPlayerOffset > boxWidth / 2) 
