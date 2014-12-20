@@ -17,5 +17,10 @@ public class MouthController : MonoBehaviour
 			playerController.AddExperience(1);
 			Destroy (collider.gameObject);
 		}
+		if (collider.tag == "asteroid" && (playerController.GetExperience () > 10))
+		{
+			playerController.AddExperience(10);
+			Destroy (collider.gameObject);
+		}
 	}
 }

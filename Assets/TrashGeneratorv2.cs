@@ -25,14 +25,27 @@ public class TrashGeneratorv2 : MonoBehaviour
 			for (int i = 0; i < trashCount; i++)
 			{
 				Vector3 spawnPoint;
-
 				if((Random.Range(0.0f,1.0f)>0.5f))
 				{
-					spawnPoint = new Vector3(-40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+					if((Random.Range(0.0f,1.0f)>0.5f))
+					{
+						spawnPoint = new Vector3(-40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+					}
+					else
+					{
+						spawnPoint = new Vector3(40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+					}
 				}
 				else
 				{
-					spawnPoint = new Vector3(40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+					if((Random.Range(0.0f,1.0f)>0.5f))
+					{
+						spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)+ transform.position.x, -40.0f+transform.position.y, 0.0f);
+					}
+					else
+					{
+						spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)+ transform.position.x, 40.0f+transform.position.y, 0.0f);
+					}
 				}
 
 				//Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)+ transform.position.x, Random.Range(-spawnValues.y,spawnValues.y)+transform.position.y, spawnValues.z);

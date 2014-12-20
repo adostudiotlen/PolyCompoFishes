@@ -45,4 +45,9 @@ public class PlayerController : MonoBehaviour
 	{
 		experience += amount;
 	}
+
+	public int GetExperience()
+	{
+		return experience;
+	}
 }
