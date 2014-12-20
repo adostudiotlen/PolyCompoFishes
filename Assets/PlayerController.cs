@@ -30,14 +30,15 @@ public class PlayerController : MonoBehaviour
     void Update()
 	{
 		this.transform.localScale = new Vector3(1.0f + (float)experience * 0.1f,1.0f + (float)experience * 0.1f, 1.0f);
-        CheckExp();
+		this.rigidbody2D.mass = 1.0f * this.transform.localScale.x;
+		CheckExp();
 	}
 
 	void FixedUpdate()
 	{
 		if(Input.GetKey (KeyCode.W))
 		{
-			this.rigidbody2D.AddForce(-this.transform.right * 0.1f, ForceMode2D.Impulse );
+			this.rigidbody2D.AddForce(-this.transform.right * 0.1f * this.transform.localScale.x* this.transform.localScale.x, ForceMode2D.Impulse );
 			engineParticleSystem.particleSystem.Emit(1);
 		}
 
