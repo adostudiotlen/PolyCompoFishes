@@ -3,7 +3,7 @@ using System.Collections;
 
 public class starsGenerator : MonoBehaviour 
 {
-	float boxWidth = 50.0f;
+	float boxWidth = 100.0f;
 	const int starsAmount = 100;
 	Vector2 center;
 	//GameObject star;
@@ -50,7 +50,7 @@ public class starsGenerator : MonoBehaviour
 	{
 		xPlayerOffset = player.transform.position.x - (float)xBox * boxWidth;
 		yPlayerOffset = player.transform.position.y - (float)yBox * boxWidth;
-		boxWidth = boxWidth * player.transform.localScale.x;
+		//boxWidth = boxWidth * player.transform.localScale.x;
 
 		//W prawo
 		if (xPlayerOffset > boxWidth / 2) 

@@ -10,11 +10,14 @@ public class TrashGeneratorv2 : MonoBehaviour
 	public float waveWait;
 	public GameObject[] trash;
 
+	GameObject player;
+
 
 
 	void Start () 
 	{
 		StartCoroutine(SpawnTrash());
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	IEnumerator SpawnTrash()
@@ -50,7 +53,7 @@ public class TrashGeneratorv2 : MonoBehaviour
 
 				//Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x)+ transform.position.x, Random.Range(-spawnValues.y,spawnValues.y)+transform.position.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				Instantiate(trash[Random.Range(0, trash.Length)], spawnPoint, spawnRotation);
+				Instantiate(trash[Random.Range(0, trash.Length)], player.transform.localScale.x * spawnPoint, spawnRotation);
 				yield return new WaitForSeconds(spawnWait);
 			}
 			yield return new WaitForSeconds(waveWait);
