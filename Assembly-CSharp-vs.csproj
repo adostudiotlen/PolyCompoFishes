@@ -39,10 +39,17 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
+<<<<<<< HEAD
 	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+=======
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+>>>>>>> dbb23768905de277473f2afb442b0c3f3d272179
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -55,11 +62,18 @@
      <Compile Include="Assets\RandomForce.cs" />
      <Compile Include="Assets\TrashGenerator.cs" />
      <Compile Include="Assets\TrashGeneratorv2.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\menuStarsGenerator.cs" />
      <Compile Include="Assets\particleController.cs" />
      <Compile Include="Assets\starsGenerator.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+=======
+     <Compile Include="Assets\particleController.cs" />
+     <Compile Include="Assets\starsGenerator.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+>>>>>>> dbb23768905de277473f2afb442b0c3f3d272179
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
