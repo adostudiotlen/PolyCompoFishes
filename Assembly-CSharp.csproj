@@ -55,6 +55,7 @@
      <Compile Include="Assets\RandomForce.cs" />
      <Compile Include="Assets\TrashGenerator.cs" />
      <Compile Include="Assets\TrashGeneratorv2.cs" />
+     <Compile Include="Assets\menuStarsGenerator.cs" />
      <Compile Include="Assets\particleController.cs" />
      <Compile Include="Assets\starsGenerator.cs" />
  <Reference Include="UnityEngine.UI">
