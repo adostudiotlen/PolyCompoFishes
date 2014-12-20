@@ -37,7 +37,7 @@ public class starsGenerator : MonoBehaviour
 				//Debug.Log ("Spawn");
 				spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 				//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-				GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
+				GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)3)], spawnPoint, Quaternion.identity) as GameObject;
 				//Instantiate(star, spawnPoint, Quaternion.identity);
 				//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 				tablica[i,j] = gwiazda;

@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 
 	public void Play()
 	{
-		Application.LoadLevel ("scena");
+		Application.LoadLevel ("play");
 	}
 
 	public void Exit()
