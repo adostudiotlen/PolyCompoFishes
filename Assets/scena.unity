@@ -166,7 +166,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 1558295013}
   m_GameObject: {fileID: 211569358}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: .200000003
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230087468}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -221,8 +221,8 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ff16d69e93df46a4292b0a90e59d1f79, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 791d1818098619b449ac02bb6ebed7cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &230087470
 Transform:
@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 230087468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 391422548}
   m_RootOrder: 0
@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &947878741
 Renderer:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .0695826039, g: .154042289, b: .286764681, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -825,6 +825,10 @@ Prefab:
     - target: {fileID: 100006, guid: ccc93e62939538c44a200a88095ff364, type: 2}
       propertyPath: m_Name
       value: Head_old
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: ccc93e62939538c44a200a88095ff364, type: 2}
+      propertyPath: m_LinearDrag
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccc93e62939538c44a200a88095ff364, type: 2}

@@ -37,8 +37,13 @@ public class PlayerController : MonoBehaviour
 			PlayEatingAnim();
 		}
 
+		if (Input.GetKey (KeyCode.Escape)) 
+		{
+			Application.LoadLevel("menu");
+		}
+
 		angle = Input.GetAxis ("Horizontal");
-		Debug.Log (angle);
+		//Debug.Log (angle);
 		//this.rigidbody2D.MoveRotation (angle * 45.0f);
 		//transform.Rotate (-this.transform.forward, angle * 45.0f * 0.05f);
 		rigidbody2D.angularVelocity = angle * -45.0f * 3.0f;
