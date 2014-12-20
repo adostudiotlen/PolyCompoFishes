@@ -3,7 +3,8 @@ using System.Collections;
 
 public class RandomForce : MonoBehaviour 
 {
-
+    public float xMaxVelocity;
+    public float yMaxVelocity;
 	void Start () 
     {
         AddRandomVelocity();
@@ -11,6 +12,6 @@ public class RandomForce : MonoBehaviour
 
     private void AddRandomVelocity()
     {
-        rigidbody2D.velocity= new Vector2(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
+        rigidbody2D.velocity = new Vector2(Random.Range(-xMaxVelocity, xMaxVelocity), Random.Range(-yMaxVelocity, yMaxVelocity));
     }
 }
