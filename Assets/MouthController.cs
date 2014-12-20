@@ -18,11 +18,23 @@ public class MouthController : MonoBehaviour
 			playerController.PlayEatingAnim();
 			Destroy (collider.gameObject);
 		}
-		if (collider.tag == "asteroid" && (playerController.GetExperience () > 10))
+		if (collider.tag == "asteroid" && (playerController.GetExperience () >= 10))
 		{
 			playerController.AddExperience(10);
 			playerController.PlayEatingAnim();
 			Destroy (collider.gameObject);
 		}
+        if (collider.tag == "planet" && (playerController.GetExperience() >= 100))
+        {
+            playerController.AddExperience(100);
+            playerController.PlayEatingAnim();
+            Destroy(collider.gameObject);
+        }
+        if (collider.tag == "sun" && (playerController.GetExperience() >= 800))
+        {
+            playerController.AddExperience(100000);
+            playerController.PlayEatingAnim();
+            Destroy(collider.gameObject);
+        }
 	}
 }
