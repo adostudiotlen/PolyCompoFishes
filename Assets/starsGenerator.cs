@@ -4,9 +4,10 @@ using System.Collections;
 public class starsGenerator : MonoBehaviour 
 {
 	float boxWidth = 300.0f;
-	const int starsAmount = 100;
+	const int starsAmount = 3000;
 	Vector2 center;
-	GameObject star;
+	//GameObject star;
+	GameObject[] stars = new GameObject[3];
 
 	Vector3 spawnPoint;
 
@@ -23,7 +24,10 @@ public class starsGenerator : MonoBehaviour
 	{
 
 		player = GameObject.FindGameObjectWithTag ("Player");
-		star = transform.FindChild ("Star").gameObject;
+		//star = transform.FindChild ("Star").gameObject;
+		stars [0] = transform.FindChild ("Star1").gameObject;
+		stars [1] = transform.FindChild ("Star2").gameObject;
+		stars [2] = transform.FindChild ("Star3").gameObject;
 		center = new Vector2 (-boxWidth, boxWidth);
 		for (int i=0; i<9; i++) 
 		{
@@ -33,7 +37,7 @@ public class starsGenerator : MonoBehaviour
 				//Debug.Log ("Spawn");
 				spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 				//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-				GameObject gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
+				GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
 				//Instantiate(star, spawnPoint, Quaternion.identity);
 				//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 				tablica[i,j] = gwiazda;
@@ -82,7 +86,7 @@ public class starsGenerator : MonoBehaviour
 					//Debug.Log ("Spawn");
 					spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 					//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-					GameObject gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
+					GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
 					//Instantiate(star, spawnPoint, Quaternion.identity);
 					//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 					tablica[i,j] = gwiazda;
@@ -125,7 +129,7 @@ public class starsGenerator : MonoBehaviour
 					//Debug.Log ("Spawn");
 					spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 					//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-					GameObject gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
+					GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
 					//Instantiate(star, spawnPoint, Quaternion.identity);
 					//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 					tablica[i,j] = gwiazda;
@@ -170,7 +174,7 @@ public class starsGenerator : MonoBehaviour
 					//Debug.Log ("Spawn");
 					spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 					//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-					GameObject gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
+					GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
 					//Instantiate(star, spawnPoint, Quaternion.identity);
 					//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 					tablica[i,j] = gwiazda;
@@ -216,7 +220,7 @@ public class starsGenerator : MonoBehaviour
 					//Debug.Log ("Spawn");
 					spawnPoint = new Vector3(center.x + Random.Range(-boxWidth/2, boxWidth/2), center.y + Random.Range(-boxWidth/2, boxWidth/2), 1.0f);
 					//tablica[i][j]  = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
-					GameObject gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as GameObject;
+					GameObject gwiazda = Instantiate(stars[Random.Range((int)0,(int)2)], spawnPoint, Quaternion.identity) as GameObject;
 					//Instantiate(star, spawnPoint, Quaternion.identity);
 					//Transform gwiazda = Instantiate(star, spawnPoint, Quaternion.identity) as Transform;
 					tablica[i,j] = gwiazda;
