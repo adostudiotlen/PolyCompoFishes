@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
 	public int experience = 0;
 	GameObject engineParticleSystem;
     public GameObject[] powerUps;
+    public int healthPoints;
 	Animator anim;
+
 
 	void Awake()
 	{
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
         {
             powerUps[i].gameObject.SetActive(false);
         }
-
+        healthPoints = 4;
 	}
 
     void Update()
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
 		this.transform.localScale = new Vector3(1.0f + (float)experience * 0.1f,1.0f + (float)experience * 0.1f, 1.0f);
 		this.rigidbody2D.mass = 1.0f * this.transform.localScale.x;
 		CheckExp();
+        checkHealth();
 	}
 
 	void FixedUpdate()
@@ -103,4 +106,16 @@ public class PlayerController : MonoBehaviour
             //nothing
         }
     }
+
+    private void checkHealth()
+    {
+        if (healthPoints == 0)
+        {
+            Time.timeScale = 0.0f;
+
+        }
+    }
+
+
+    
 }
