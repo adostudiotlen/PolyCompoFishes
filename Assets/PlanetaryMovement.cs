@@ -42,7 +42,7 @@ public class PlanetaryMovement : MonoBehaviour
         //planet1.transform.position = new Vector3((transform.position.x + 100 * Mathf.Cos((Mathf.PI * Time.time)/(planetSpeed * 1))), (transform.position.y + 100 * Mathf.Sin((Mathf.PI * Time.time)/(planetSpeed * 1))),0);
         //transform.position = new Vector3((sun.transform.position.x + 100 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 1))), (sun.transform.position.y + 100 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 1))), 0);
 		transform.RotateAround( sun.transform.position, Vector3.forward, Time.deltaTime * planetSpeed);
-		Debug.Log (sun.transform.position);
+		//Debug.Log (sun.transform.position);
 		//planet1.transform.position = new Vector3((transform.position.x + 100 * Mathf.Cos((Mathf.PI * Time.time)/(planetSpeed * 1))), (transform.position.y + 100 * Mathf.Sin((Mathf.PI * Time.time)/(planetSpeed * 1))),0);
         //planet2.transform.position = new Vector3((transform.position.x + 200 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 2))), (transform.position.y + 200 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 2))), 0);
         //planet3.transform.position = new Vector3((transform.position.x + 250 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 3))), (transform.position.y + 250 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 3))), 0);

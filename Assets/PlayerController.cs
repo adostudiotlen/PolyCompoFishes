@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     public GameObject[] powerUps;
     public int healthPoints;
 	Animator anim;
+	GameObject skeleton;
+
+	public GameObject gameOver;
+
+	bool isDead = false;
 
 	GameObject[] injuries = new GameObject[3];
 
@@ -21,6 +26,7 @@ public class PlayerController : MonoBehaviour
 		mouth = (transform.FindChild("Head")).FindChild ("Mouth").gameObject;
 		engineParticleSystem = ((transform.FindChild ("Tail")).FindChild ("Silnik")).FindChild ("Particle System").gameObject;
 		anim = (transform.FindChild("Head")).FindChild ("Head").GetComponent<Animator> ();
+		skeleton = (transform.FindChild ("Head")).FindChild ("Skeleton").gameObject;
         //powerUps[(int) 0] = (transform.FindChild("PowerUps")).FindChild("PowerUp1").gameObject;
         //powerUps[(int) 1] = (transform.FindChild("PowerUps")).FindChild("PowerUp2").gameObject;
         //powerUps[(int) 2] = (transform.FindChild("PowerUps")).FindChild("PowerUp3").gameObject;
@@ -46,16 +52,28 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if(Input.GetKey (KeyCode.W))
+		if (!isDead) 
 		{
-			this.rigidbody2D.AddForce(-this.transform.right * 0.1f * this.transform.localScale.x* this.transform.localScale.x, ForceMode2D.Impulse );
-			engineParticleSystem.particleSystem.Emit(1);
+			if(Input.GetKey (KeyCode.W))
+			{
+				this.rigidbody2D.AddForce(-this.transform.right * 0.1f * this.transform.localScale.x* this.transform.localScale.x, ForceMode2D.Impulse );
+				engineParticleSystem.particleSystem.Emit(1);
+			}
+			
+			if (Input.GetKey (KeyCode.Space)) 
+			{
+				PlayEatingAnim();
+			}
+
+		}
+		else
+		{
+			if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Return))
+			{
+				Application.LoadLevel("menu");
+			}
 		}
 
-		if (Input.GetKey (KeyCode.Space)) 
-		{
-			PlayEatingAnim();
-		}
 
 		if (Input.GetKey (KeyCode.Escape)) 
 		{
@@ -128,11 +146,15 @@ public class PlayerController : MonoBehaviour
 		{
 			injuries[2].SetActive(true);
 		}
-
-        if (healthPoints == 0)
+		
         if (healthPoints <= 0)
         {
-            Time.timeScale = 0.0f;
+            //Time.timeScale = 0.0f;
+			isDead = true;
+			Instantiate(skeleton);
+			gameOver.SetActive(true);
+			//this.enabled = false;
+
 
         }
     }
