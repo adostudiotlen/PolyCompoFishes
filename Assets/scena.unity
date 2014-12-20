@@ -166,7 +166,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dde665557fd788444ab7b70fbe9ca579, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &344746778
@@ -405,7 +405,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1370051698}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 100, y: 100}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1370051706
@@ -466,6 +466,6 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ff16d69e93df46a4292b0a90e59d1f79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
