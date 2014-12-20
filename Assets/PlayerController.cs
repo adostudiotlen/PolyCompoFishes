@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 	float angle;
 	GameObject tail;
 	GameObject mouth;
-	int experience =0;
+	public int experience = 0;
 	GameObject engineParticleSystem;
+    public GameObject[] powerUps;
 	Animator anim;
 
 	void Awake()
@@ -16,18 +17,26 @@ public class PlayerController : MonoBehaviour
 		mouth = (transform.FindChild("Head")).FindChild ("Mouth").gameObject;
 		engineParticleSystem = ((transform.FindChild ("Tail")).FindChild ("Silnik")).FindChild ("Particle System").gameObject;
 		anim = (transform.FindChild("Head")).FindChild ("Head").GetComponent<Animator> ();
+        //powerUps[(int) 0] = (transform.FindChild("PowerUps")).FindChild("PowerUp1").gameObject;
+        //powerUps[(int) 1] = (transform.FindChild("PowerUps")).FindChild("PowerUp2").gameObject;
+        //powerUps[(int) 2] = (transform.FindChild("PowerUps")).FindChild("PowerUp3").gameObject;
+        for (int i = 0; i == powerUps.Length; i++)
+        {
+            powerUps[i].gameObject.SetActive(false);
+        }
+
 	}
 
-	void Update()
+    void Update()
 	{
 		this.transform.localScale = new Vector3(1.0f + (float)experience * 0.1f,1.0f + (float)experience * 0.1f, 1.0f);
+        CheckExp();
 	}
 
 	void FixedUpdate()
 	{
 		if(Input.GetKey (KeyCode.W))
 		{
-
 			this.rigidbody2D.AddForce(-this.transform.right * 0.1f, ForceMode2D.Impulse );
 			engineParticleSystem.particleSystem.Emit(1);
 		}
@@ -38,7 +47,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		angle = Input.GetAxis ("Horizontal");
-		Debug.Log (angle);
+		//Debug.Log (angle);
 		//this.rigidbody2D.MoveRotation (angle * 45.0f);
 		//transform.Rotate (-this.transform.forward, angle * 45.0f * 0.05f);
 		rigidbody2D.angularVelocity = angle * -45.0f * 3.0f;
@@ -65,4 +74,27 @@ public class PlayerController : MonoBehaviour
 	{
 		anim.Play ("eating");
 	}
+
+    private void CheckExp()
+    {
+        if (experience >= 50 && experience < 100)
+        {
+            powerUps[0].gameObject.SetActive(true);
+            Debug.Log("Level 1");
+        }
+        else if (experience >= 100 && experience < 150)
+        {
+            powerUps[1].gameObject.SetActive(true);
+            Debug.Log("Level 2");
+        }
+        else if (experience >= 150)
+        {
+            powerUps[2].gameObject.SetActive(true);
+            Debug.Log("Level 3");
+        }
+        else
+        {
+            //nothing
+        }
+    }
 }
