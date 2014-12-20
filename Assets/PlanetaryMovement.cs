@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlanetaryMovement : MonoBehaviour 
 {
+    public float r;
     //GameObject planet1;
     //GameObject planet2;
     //GameObject planet3;
@@ -13,11 +14,15 @@ public class PlanetaryMovement : MonoBehaviour
     //GameObject planet8;
     GameObject sun;
 
+    public float phase;
+
     float planetSpeed;
     //float[] speedMulti = new float[8];
+
     void Awake()
     {
-        sun = transform.GetComponentInParent<Transform>().gameObject;
+        //sun = transform.GetComponentInParent<Transform>().gameObject;
+        sun = GameObject.FindGameObjectWithTag("sun");
         //planet1 = transform.FindChild("planeta1").gameObject;
         //planet2 = transform.FindChild("planeta2").gameObject;
         //planet3 = transform.FindChild("planeta3").gameObject;
@@ -28,6 +33,7 @@ public class PlanetaryMovement : MonoBehaviour
         //planet8 = transform.FindChild("planeta8").gameObject;
 
         planetSpeed = Random.Range(100.0f, 700.0f);
+        phase = Random.Range(0.0f, 2 * (Mathf.PI));
         //for (int i = 0; i == 8; i++)
         //{
         //    speedMulti[i] = Random.Range(1.0f, 7.0f);
@@ -37,7 +43,8 @@ public class PlanetaryMovement : MonoBehaviour
 
 	void Update ()
     {
-        new Vector3((sun.transform.position.x + 100 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 1))), (sun.transform.position.y + 100 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 1))), 0);
+        transform.position = new Vector3((sun.transform.position.x + r * Mathf.Cos((Mathf.PI * Time.time +phase) / (planetSpeed * 1))), (sun.transform.position.y + r * Mathf.Sin((Mathf.PI * Time.time + phase) / (planetSpeed * 1))), 0);
+        //transform.position = new Vector3((sun.transform.position.x + 100 + r * Mathf.Cos(Mathf.Clamp(xr,0.0f,(float)(Mathf.PI * Time.time)))),x(sun.transform.position.x + 100 + r * Mathf.Sin(Mathf.PI * Time.time))),  0.0f);
         //planet1.transform.position = new Vector3((transform.position.x + 100 * Mathf.Cos((Mathf.PI * Time.time)/(planetSpeed * 1))), (transform.position.y + 100 * Mathf.Sin((Mathf.PI * Time.time)/(planetSpeed * 1))),0);
         //planet2.transform.position = new Vector3((transform.position.x + 200 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 2))), (transform.position.y + 200 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 2))), 0);
         //planet3.transform.position = new Vector3((transform.position.x + 250 * Mathf.Cos((Mathf.PI * Time.time) / (planetSpeed * 3))), (transform.position.y + 250 * Mathf.Sin((Mathf.PI * Time.time) / (planetSpeed * 3))), 0);

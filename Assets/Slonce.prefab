@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 58: {fileID: 5800004}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: planeta8
   m_TagString: planet
@@ -57,6 +58,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 58: {fileID: 5800002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: planeta5
   m_TagString: planet
@@ -88,7 +90,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400010}
-  - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
   m_Layer: 0
   m_Name: Slonce
@@ -106,6 +107,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 58: {fileID: 5800006}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: planeta7
   m_TagString: planet
@@ -154,6 +156,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 58: {fileID: 5800008}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: planeta6
   m_TagString: planet
@@ -170,6 +173,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400020}
   - 58: {fileID: 5800010}
+  - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: planeta4
   m_TagString: planet
@@ -202,6 +206,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 58: {fileID: 5800012}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: planeta3
   m_TagString: planet
@@ -250,6 +255,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400030}
   - 58: {fileID: 5800014}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: planeta2
   m_TagString: planet
@@ -282,6 +288,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400034}
   - 58: {fileID: 5800016}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: planeta1
   m_TagString: planet
@@ -626,12 +633,97 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
+  m_GameObject: {fileID: 100030}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503ec0e39a00dc4cb7d35897d12586f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
