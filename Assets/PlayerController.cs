@@ -7,11 +7,15 @@ public class PlayerController : MonoBehaviour
 	GameObject tail;
 	GameObject mouth;
 	int experience =0;
+	GameObject engineParticleSystem;
+	Animator anim;
 
 	void Awake()
 	{
 		tail = transform.FindChild ("Tail").gameObject;
 		mouth = (transform.FindChild("Head")).FindChild ("Mouth").gameObject;
+		engineParticleSystem = ((transform.FindChild ("Tail")).FindChild ("Silnik")).FindChild ("Particle System").gameObject;
+		anim = (transform.FindChild("Head")).FindChild ("Head").GetComponent<Animator> ();
 	}
 
 	void Update()
@@ -25,6 +29,12 @@ public class PlayerController : MonoBehaviour
 		{
 
 			this.rigidbody2D.AddForce(-this.transform.right * 0.1f, ForceMode2D.Impulse );
+			engineParticleSystem.particleSystem.Emit(1);
+		}
+
+		if (Input.GetKey (KeyCode.Space)) 
+		{
+			PlayEatingAnim();
 		}
 
 		angle = Input.GetAxis ("Horizontal");
@@ -49,5 +59,10 @@ public class PlayerController : MonoBehaviour
 	public int GetExperience()
 	{
 		return experience;
+	}
+
+	public void PlayEatingAnim()
+	{
+		anim.Play ("eating");
 	}
 }

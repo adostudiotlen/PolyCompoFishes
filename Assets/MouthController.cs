@@ -15,11 +15,13 @@ public class MouthController : MonoBehaviour
 		if (collider.tag == "trash") 
 		{
 			playerController.AddExperience(1);
+			playerController.PlayEatingAnim();
 			Destroy (collider.gameObject);
 		}
 		if (collider.tag == "asteroid" && (playerController.GetExperience () > 10))
 		{
 			playerController.AddExperience(10);
+			playerController.PlayEatingAnim();
 			Destroy (collider.gameObject);
 		}
 	}
