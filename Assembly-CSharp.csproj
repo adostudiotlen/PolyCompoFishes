@@ -51,6 +51,7 @@
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\HealthController.cs" />
      <Compile Include="Assets\MouthController.cs" />
+     <Compile Include="Assets\PlanetaryMovement.cs" />
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\RandomForce.cs" />
      <Compile Include="Assets\TrashGenerator.cs" />
