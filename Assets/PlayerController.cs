@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int healthPoints;
 	Animator anim;
 
+	GameObject[] injuries = new GameObject[3];
+
 
 	void Awake()
 	{
@@ -22,11 +24,16 @@ public class PlayerController : MonoBehaviour
         //powerUps[(int) 0] = (transform.FindChild("PowerUps")).FindChild("PowerUp1").gameObject;
         //powerUps[(int) 1] = (transform.FindChild("PowerUps")).FindChild("PowerUp2").gameObject;
         //powerUps[(int) 2] = (transform.FindChild("PowerUps")).FindChild("PowerUp3").gameObject;
+		injuries [0] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew1").gameObject;
+		injuries [1] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew2").gameObject;
+		injuries [2] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew3").gameObject;
         for (int i = 0; i == powerUps.Length; i++)
         {
             powerUps[i].gameObject.SetActive(false);
         }
         healthPoints = 4;
+
+
 	}
 
     void Update()
@@ -109,6 +116,19 @@ public class PlayerController : MonoBehaviour
 
     private void checkHealth()
     {
+		if (healthPoints == 3) 
+		{
+			injuries[0].SetActive(true);
+		}
+		if (healthPoints == 2) 
+		{
+			injuries[1].SetActive(true);
+		}
+		if (healthPoints == 1) 
+		{
+			injuries[2].SetActive(true);
+		}
+
         if (healthPoints == 0)
         {
             Time.timeScale = 0.0f;
