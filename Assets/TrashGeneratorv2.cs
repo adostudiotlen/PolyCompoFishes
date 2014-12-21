@@ -32,22 +32,22 @@ public class TrashGeneratorv2 : MonoBehaviour
 				{
 					if((Random.Range(0.0f,1.0f)>0.5f))
 					{
-						spawnPoint = new Vector3(-40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+						spawnPoint = new Vector3(-40.0f*player.transform.localScale.x+ transform.position.x, Random.Range(-20.0f, 20.0f)*player.transform.localScale.y+transform.position.y, 0.0f);
 					}
 					else
 					{
-						spawnPoint = new Vector3(40.0f+ transform.position.x, Random.Range(-20.0f, 20.0f)+transform.position.y, 0.0f);
+						spawnPoint = new Vector3(40.0f*player.transform.localScale.x+ transform.position.x, Random.Range(-20.0f, 20.0f)*player.transform.localScale.y+transform.position.y, 0.0f);
 					}
 				}
 				else
 				{
 					if((Random.Range(0.0f,1.0f)>0.5f))
 					{
-						spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)+ transform.position.x, -40.0f+transform.position.y, 0.0f);
+						spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)*player.transform.localScale.x+ transform.position.x, -40.0f*player.transform.localScale.y+transform.position.y, 0.0f);
 					}
 					else
 					{
-						spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)+ transform.position.x, 40.0f+transform.position.y, 0.0f);
+                        spawnPoint = new Vector3(Random.Range(-20.0f, 20.0f)*player.transform.localScale.x + transform.position.x, 40.0f*player.transform.localScale.y + transform.position.y, 0.0f);
 					}
 				}
 
