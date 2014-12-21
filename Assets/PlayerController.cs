@@ -159,6 +159,12 @@ public class PlayerController : MonoBehaviour
 			}
             //nothing
         }
+
+
+		if(experience >=3000)
+		{
+			fader.SetActive(true);
+		}
     }
 
     private void checkHealth()

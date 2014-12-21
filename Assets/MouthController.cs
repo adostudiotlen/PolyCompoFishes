@@ -32,7 +32,7 @@ public class MouthController : MonoBehaviour
         }
         if (collider.tag == "sun" && (playerController.GetExperience() >= 500))
         {
-            playerController.AddExperience(100000);
+            playerController.AddExperience(3000);
             playerController.PlayEatingAnim();
             Destroy(collider.gameObject);
         }

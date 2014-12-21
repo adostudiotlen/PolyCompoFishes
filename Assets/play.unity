@@ -2436,6 +2436,14 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -80
       objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
+      propertyPath: m_Center.x
+      value: .790000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
+      propertyPath: m_Center.y
+      value: -3.00999999
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
@@ -4304,7 +4312,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Radius: 47
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: .790000021, y: -3.00999999}
 --- !u!1 &2047058016
 GameObject:
   m_ObjectHideFlags: 0
