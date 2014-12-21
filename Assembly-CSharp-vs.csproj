@@ -60,6 +60,7 @@
      <Compile Include="Assets\menuStarsGenerator.cs" />
      <Compile Include="Assets\particleController.cs" />
      <Compile Include="Assets\starsGenerator.cs" />
+     <Compile Include="Assets\tutController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

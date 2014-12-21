@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 			{
 				PlayEatingAnim();
 			}
-
+			angle = Input.GetAxis ("Horizontal");
 		}
 		else
 		{
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 			Application.LoadLevel("menu");
 		}
 
-		angle = Input.GetAxis ("Horizontal");
+
 		//Debug.Log (angle);
 		//this.rigidbody2D.MoveRotation (angle * 45.0f);
 		//transform.Rotate (-this.transform.forward, angle * 45.0f * 0.05f);
