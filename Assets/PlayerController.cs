@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject gameOver;
 	public GameObject tutorial;
 	GameObject maska;
-
+	public GameObject fader;
 	bool isDead = false;
 
 	GameObject[] injuries = new GameObject[3];
@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         }
         healthPoints = 4;
 
+		//fader = GameObject.FindGameObjectWithTag ("fader");
 
 	}
 
@@ -183,10 +184,15 @@ public class PlayerController : MonoBehaviour
 			gameOver.SetActive(true);
 			//this.enabled = false;
 
+			fader.SetActive(true);
+			//Application.LoadLevel("end");
 
         }
     }
 
-
+	public void EndPlaying()
+	{
+		Application.LoadLevel ("end");
+	}
     
 }

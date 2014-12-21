@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\DestroyByBoundary.cs" />
-     <Compile Include="Assets\FaderController.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\HealthController.cs" />
      <Compile Include="Assets\MouthController.cs" />
@@ -58,6 +57,8 @@
      <Compile Include="Assets\TrashGenerator.cs" />
      <Compile Include="Assets\TrashGeneratorv2.cs" />
      <Compile Include="Assets\asteroidController.cs" />
+     <Compile Include="Assets\endController.cs" />
+     <Compile Include="Assets\faderController.cs" />
      <Compile Include="Assets\headController.cs" />
      <Compile Include="Assets\menuStarsGenerator.cs" />
      <Compile Include="Assets\particleController.cs" />
