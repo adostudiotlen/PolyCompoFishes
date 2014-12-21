@@ -70,20 +70,16 @@ public class PlayerController : MonoBehaviour
 				PlayEatingAnim();
 			}
 			angle = Input.GetAxis ("Horizontal");
-		}
-		else
-		{
-			if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Return))
+
+			if (Input.GetKey (KeyCode.Escape)) 
 			{
 				Application.LoadLevel("menu");
 			}
 		}
 
 
-		if (Input.GetKey (KeyCode.Escape)) 
-		{
-			Application.LoadLevel("menu");
-		}
+
+
 
 
 		//Debug.Log (angle);

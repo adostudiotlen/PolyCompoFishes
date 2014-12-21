@@ -2244,6 +2244,8 @@ MonoBehaviour:
   trash:
   - {fileID: 100000, guid: 119a479ab7f4b094eaa0f0a95f70b56f, type: 2}
   - {fileID: 100000, guid: 8664bcc41f246534880147c447058639, type: 2}
+  - {fileID: 100000, guid: 99e12d0843660b34a910323486b02299, type: 2}
+  - {fileID: 100000, guid: de6ccd97088f0504d88ffd905ed44db4, type: 2}
 --- !u!4 &638729781
 Transform:
   m_ObjectHideFlags: 0
@@ -2293,7 +2295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 21200016, guid: b270a06a1a32f3d45b7ff56452002c85, type: 2}
       propertyPath: m_Sprite
