@@ -53,7 +53,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -102,7 +102,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -151,7 +151,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -197,19 +197,76 @@ AnimationClip:
         tangentMode: 10
       - time: 16
         value: 1
-        inSlope: -.0833333284
-        outSlope: -.0833333284
+        inSlope: .0416666716
+        outSlope: .0416666716
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 0
-        inSlope: -.5
-        outSlope: -.5
+        inSlope: -.25
+        outSlope: -.25
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
     path: 
     classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 7.5
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_PlayOnAwake
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 19
+        value: 1
+        inSlope: -.5
+        outSlope: -.5
+        tangentMode: 10
+      - time: 20
+        value: 0
+        inSlope: -1
+        outSlope: -1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Volume
+    path: 
+    classID: 82
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
@@ -219,7 +276,7 @@ AnimationClip:
       value: {fileID: 21300000, guid: d0cbd56b9a0054643a1625c4f8a08824, type: 3}
     - time: 13
       value: {fileID: 21300000, guid: 640718473da46cb42b36d3e7bea18b4f, type: 3}
-    - time: 18
+    - time: 20
       value: {fileID: 21300000, guid: 640718473da46cb42b36d3e7bea18b4f, type: 3}
     attribute: m_Sprite
     path: 
@@ -236,6 +293,24 @@ AnimationClip:
       attribute: 304273561
       script: {fileID: 0}
       classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 2720275347
+      script: {fileID: 0}
+      classID: 82
+      customType: 0
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 3305885265
+      script: {fileID: 0}
+      classID: 82
+      customType: 0
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 4104493590
+      script: {fileID: 0}
+      classID: 82
       customType: 0
       isPPtrCurve: 0
     - path: 0
@@ -270,7 +345,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 18.0166664
+    m_StopTime: 20.0166664
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -323,7 +398,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -372,7 +447,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -421,7 +496,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 1
         inSlope: 0
         outSlope: 0
@@ -467,13 +542,13 @@ AnimationClip:
         tangentMode: 10
       - time: 16
         value: 1
-        inSlope: -.0833333284
-        outSlope: -.0833333284
+        inSlope: .0416666716
+        outSlope: .0416666716
         tangentMode: 10
-      - time: 18
+      - time: 20
         value: 0
-        inSlope: -.5
-        outSlope: -.5
+        inSlope: -.25
+        outSlope: -.25
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -481,9 +556,73 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 7.5
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_PlayOnAwake
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: 
+    classID: 82
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 19
+        value: 1
+        inSlope: -.5
+        outSlope: -.5
+        tangentMode: 10
+      - time: 20
+        value: 0
+        inSlope: -1
+        outSlope: -1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Volume
+    path: 
+    classID: 82
+    script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events:
-  - time: 18
+  - time: 7.5
+    functionName: playMarch
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 20
     functionName: endAnimation
     data: 
     objectReferenceParameter: {fileID: 0}

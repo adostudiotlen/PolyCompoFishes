@@ -57,9 +57,11 @@
      <Compile Include="Assets\TrashGenerator.cs" />
      <Compile Include="Assets\TrashGeneratorv2.cs" />
      <Compile Include="Assets\asteroidController.cs" />
+     <Compile Include="Assets\creditsController.cs" />
      <Compile Include="Assets\endController.cs" />
      <Compile Include="Assets\faderController.cs" />
      <Compile Include="Assets\headController.cs" />
+     <Compile Include="Assets\logoController.cs" />
      <Compile Include="Assets\menuStarsGenerator.cs" />
      <Compile Include="Assets\particleController.cs" />
      <Compile Include="Assets\starsGenerator.cs" />

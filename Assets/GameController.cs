@@ -13,4 +13,9 @@ public class GameController : MonoBehaviour
 	{
 		Application.Quit ();
 	}
+
+	public void Credits()
+	{
+		Application.LoadLevel ("credits");
+	}
 }

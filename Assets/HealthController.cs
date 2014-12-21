@@ -3,6 +3,13 @@ using System.Collections;
 
 public class HealthController : MonoBehaviour 
 {
+	AudioSource[] sounds;
+
+	void Awake()
+	{
+		sounds = this.GetComponents<AudioSource> ();
+	}
+
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -15,6 +22,7 @@ public class HealthController : MonoBehaviour
 				coll.gameObject.renderer.enabled = false;
                 Destroy(coll.gameObject, 5.0f);
 				coll.gameObject.GetComponent<asteroidController>().EmitParticles();
+				this.sounds[1].Play();
             }
             else if (transform.parent.GetComponentInParent<PlayerController>().experience >= 10 && transform.parent.GetComponentInParent<PlayerController>().experience < 100)
             {
@@ -31,6 +39,7 @@ public class HealthController : MonoBehaviour
             if(transform.parent.GetComponentInParent<PlayerController>().experience < 500)
             {
                 transform.parent.GetComponentInParent<PlayerController>().healthPoints= transform.parent.GetComponentInParent<PlayerController>().healthPoints-4;
+				this.sounds[0].Play();
             }
             else if(transform.parent.GetComponentInParent<PlayerController>().experience >= 500)
             {
