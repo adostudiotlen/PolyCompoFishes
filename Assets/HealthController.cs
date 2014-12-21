@@ -16,9 +16,13 @@ public class HealthController : MonoBehaviour
                 Destroy(coll.gameObject, 5.0f);
 				coll.gameObject.GetComponent<asteroidController>().EmitParticles();
             }
-            else if (transform.parent.GetComponentInParent<PlayerController>().experience >= 10)
+            else if (transform.parent.GetComponentInParent<PlayerController>().experience >= 10 && transform.parent.GetComponentInParent<PlayerController>().experience < 100)
             {
                 //nothing happens
+            }
+            else if (transform.parent.GetComponentInParent<PlayerController>().experience >= 100)
+            {
+                Destroy(coll.gameObject);
             }
         }
         
