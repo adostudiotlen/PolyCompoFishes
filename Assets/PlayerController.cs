@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] powerUps;
     public int healthPoints;
 	Animator anim;
-	GameObject skeleton;
+	//GameObject skeleton;
 
 	public GameObject gameOver;
 
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 		mouth = (transform.FindChild("Head")).FindChild ("Mouth").gameObject;
 		engineParticleSystem = ((transform.FindChild ("Tail")).FindChild ("Silnik")).FindChild ("Particle System").gameObject;
 		anim = (transform.FindChild("Head")).FindChild ("Head").GetComponent<Animator> ();
-		skeleton = (transform.FindChild ("Head")).FindChild ("Skeleton").gameObject;
+//		skeleton = (transform.FindChild ("Head")).FindChild ("Skeleton").gameObject;
         //powerUps[(int) 0] = (transform.FindChild("PowerUps")).FindChild("PowerUp1").gameObject;
         //powerUps[(int) 1] = (transform.FindChild("PowerUps")).FindChild("PowerUp2").gameObject;
         //powerUps[(int) 2] = (transform.FindChild("PowerUps")).FindChild("PowerUp3").gameObject;
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         {
             //Time.timeScale = 0.0f;
 			isDead = true;
-			Instantiate(skeleton);
+			//Instantiate(skeleton);
 			gameOver.SetActive(true);
 			//this.enabled = false;
 
