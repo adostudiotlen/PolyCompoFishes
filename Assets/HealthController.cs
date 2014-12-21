@@ -28,11 +28,11 @@ public class HealthController : MonoBehaviour
         
         if(coll.gameObject.tag == "sun")
         {
-            if(transform.parent.GetComponentInParent<PlayerController>().experience < 800)
+            if(transform.parent.GetComponentInParent<PlayerController>().experience < 500)
             {
                 transform.parent.GetComponentInParent<PlayerController>().healthPoints= transform.parent.GetComponentInParent<PlayerController>().healthPoints-4;
             }
-            else if(transform.parent.GetComponentInParent<PlayerController>().experience >= 800)
+            else if(transform.parent.GetComponentInParent<PlayerController>().experience >= 500)
             {
                 //nothing happens
             }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
 	//GameObject skeleton;
 
 	public GameObject gameOver;
+	public GameObject tutorial;
+	GameObject maska;
 
 	bool isDead = false;
 
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
 		injuries [0] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew1").gameObject;
 		injuries [1] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew2").gameObject;
 		injuries [2] = ((transform.FindChild ("Head")).FindChild ("Head")).FindChild ("krew3").gameObject;
+		maska = transform.FindChild ("Head").FindChild ("Head").FindChild ("Maska").gameObject;
         for (int i = 0; i == powerUps.Length; i++)
         {
             powerUps[i].gameObject.SetActive(false);
@@ -111,23 +115,47 @@ public class PlayerController : MonoBehaviour
 
     private void CheckExp()
     {
+		if (experience >= 10 && experience < 50)
+		{
+			//powerUps[3].gameObject.SetActive(true);
+			maska.SetActive(true);
+			string text10exp = "Level up! You can eat asteroids!";
+			if(tutorial.GetComponent<Text>().text != text10exp)
+			{
+				tutorial.GetComponent<Text>().text = text10exp;
+				tutorial.GetComponent<tutController>().RestartText();
+			}
+
+		}
         if (experience >= 50 && experience < 100)
         {
             powerUps[0].gameObject.SetActive(true);
-            Debug.Log("Level 1");
+            //Debug.Log("Level 1");
         }
         else if (experience >= 100 && experience < 150)
         {
             powerUps[1].gameObject.SetActive(true);
             Debug.Log("Level 2");
+			string text100exp = "Level up! You can eat planets!";
+			if(tutorial.GetComponent<Text>().text != text100exp)
+			{
+				tutorial.GetComponent<Text>().text = text100exp;
+				tutorial.GetComponent<tutController>().RestartText();
+			}
         }
         else if (experience >= 150)
         {
             powerUps[2].gameObject.SetActive(true);
             Debug.Log("Level 3");
         }
-        else
+		else if (experience >= 500)
         {
+			string text500exp = "Level up! You can eat everything!";
+			if(tutorial.GetComponent<Text>().text != text500exp)
+			{
+				tutorial.GetComponent<Text>().text = text500exp;
+				tutorial.GetComponent<tutController>().RestartText();
+			}
             //nothing
         }
     }
