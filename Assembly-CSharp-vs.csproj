@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\DestroyByBoundary.cs" />
+     <Compile Include="Assets\FaderController.cs" />
      <Compile Include="Assets\GameController.cs" />
      <Compile Include="Assets\HealthController.cs" />
      <Compile Include="Assets\MouthController.cs" />
